@@ -1,4 +1,8 @@
 # Continues Integration / Deployment 
+
+Lets start with Screenshots...
+![alt tag](https://raw.github.com/AWSTrainers/DevOps/tree/master/1.png)
+
 You know what the say ... If you are doing Continues Deployment you must be doing Continues Integration 
 
 This demo is a simple EC2 Instance running ubuntu (yeah a love ubuntu do not start with me... ;-) , The purpose is to demonstrate
