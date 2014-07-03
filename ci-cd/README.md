@@ -1,8 +1,5 @@
 # Continues Integration / Deployment 
 
-Lets start with Screenshots...
-![alt tag](http://imgur.com/Oo1ZtdY)
-
 You know what the say ... If you are doing Continues Deployment you must be doing Continues Integration 
 
 This demo is a simple EC2 Instance running ubuntu (yeah a love ubuntu do not start with me... ;-) , The purpose is to demonstrate
