@@ -1,9 +1,19 @@
 # Continuous Integration / Deployment 
 
-You know what the say ... If you are doing Continues Deployment you must be doing Continues Integration 
+You know what the say ... If you are doing Continuous Deployment you must be doing Continuous Integration 
 
-This demo is a simple EC2 Instance running ubuntu (yeah a love ubuntu do not start with me... ;-) , The purpose is to demonstrate
-a CI/CD Simple pipeline, the flow:
+Deploy an EC2 Instance from Public AMI , AMI contains:
+
+1. Ubuntu OS
+2. Jenkins Server
+3. Maven
+4. JDK
+5. AWS CLI Tools
+
+See AMIID.md for the AMI ID.
+
+The purpose is to demonstrate a CI/CD Simple pipeline, the flow:
+
 ```
 Simple "Hello World!" Java APP ---> Remote Repo on GitHub
 											|
@@ -25,13 +35,13 @@ Simple "Hello World!" Java APP ---> Remote Repo on GitHub
 ```
 Installation Details:
 
-1. Hopefully you have a github account , if not create one create a new repo , The Jenkins server will use SSH Keys to connect to the repo
+1. Hopefully you have a github account , if not create one ,  Create a new repo , The Jenkins server will use SSH Keys to connect to the repo
    So you will need to import your public key to the github config (I used new ssh keypair only for this purpose!)
 2. Create an S3 Bucket , maybe YourName-jenkins 
 3. Jenkins Instance IAM Role: Create an IAM Role with the below policies and attach the it to the CI-Server Instance created from the AMI
-
-   Pass Role Permission Policy - We use the this policy to allow the CI-Server to execute RunInstance and pass IAM role to the newly created Instance
 ```
+   Pass Role Permission Policy - We use the this policy to allow the CI-Server to execute RunInstance and pass IAM role to the newly created Instance
+
   {
      "Version": "2012-10-17",
      "Statement": [{
