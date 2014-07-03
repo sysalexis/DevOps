@@ -1,7 +1,7 @@
 # Continues Integration / Deployment 
 
 Lets start with Screenshots...
-![alt tag](https://raw.github.com/AWSTrainers/DevOps/tree/master/1.png)
+![Jenkins-AWS](http://imgur.com/Oo1ZtdY)
 
 You know what the say ... If you are doing Continues Deployment you must be doing Continues Integration 
 
