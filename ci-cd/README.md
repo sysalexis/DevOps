@@ -157,4 +157,9 @@ Installation Details:
 Well at this point every code change to App.example Class which will be pushed to git remote repo should trigger jenkins job to build the job and start 
 And EC2 + Deploy the Code
 
+# To-Do
+* As a Post Build execute a cloudformation template which deploys the ec2 instance and a complete VPC
+* Replace the Java Hello World App with Java Web Application
+* Increase Version Numbers for every build
+
 For Questions feel free to reach out to me :  kobibito@amazon.lu 
