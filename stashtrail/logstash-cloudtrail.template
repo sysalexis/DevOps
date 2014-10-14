@@ -57,7 +57,7 @@
             "Type": "String"
         },
         "SubnetID": {
-			"Default": "vpc-xxxxxx",
+			"Default": "subnet-xxxxxxxx",
             "Description": "VPC Subnet-ID (Must have Internet Connectivity&Accesible from the internet)",
             "Type": "String"
         },
