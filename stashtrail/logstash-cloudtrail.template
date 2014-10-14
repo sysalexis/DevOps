@@ -46,8 +46,8 @@
             "Type": "String"
         },
         "AggrPrefix": {
-            "Default": "combined/",
-            "Description": "MUST BE CREATE BY YOU on the root of the cloudtrail bucket, Cloudtrail logs will regularly (via cron) move to this prefix",
+            "Default": "rawbackup/",
+            "Description": "MUST BE CREATE BY YOU on the root of the cloudtrail bucket, RAW Log will be placed here PRIOR Deletion",
             "Type": "String"
         },
         
