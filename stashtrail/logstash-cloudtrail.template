@@ -46,19 +46,19 @@
             "Type": "String"
         },
         "AggrPrefix": {
-            "Default": "rawbackup/",
-            "Description": "MUST BE CREATE BY YOU on the root of the cloudtrail bucket, RAW Log will be placed here PRIOR Deletion",
+            "Default": "combined/",
+            "Description": "MUST BE CREATE BY YOU on the root of the cloudtrail bucket, This is the monitored Logstash Prefix",
             "Type": "String"
         },
         
         "SecGroupID": {
 			"Default": "sg-xxxxxx",
-            "Description": "Security Group ID",
+            "Description": "An Existing Security Group with TCP Inbound Access On Port 80/9200",
             "Type": "String"
         },
         "SubnetID": {
 			"Default": "vpc-xxxxxx",
-            "Description": "VPC Subnet-ID (Must have Internet Connectivity)",
+            "Description": "VPC Subnet-ID (Must have Internet Connectivity&Accesible from the internet)",
             "Type": "String"
         },
         "ArtifactsBucket": {
@@ -77,7 +77,7 @@
             "Type": "String"
         },
         "TrailBucketPrefix": {
-            "Default": "CloudTrailS3BucketName/OptionalPrefix/AWSLogs/xxxxxxxxxxxx/CloudTrail",
+            "Default": "MyCloudTrailS3BucketName/OptionalPrefix/AWSLogs/xxxxxxxxxxxx/CloudTrail",
             "Description": "The Cloudtrail bucket full prefix (excluding region name), replacing xxxxxxxxxxxx with your AWS Account ID i.e. ctrail-logs/AWSLogs/111111111111/CloudTrail/",
             "Type": "String"
         },
