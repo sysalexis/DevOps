@@ -1,3 +1,2 @@
-All Things are DevOps
-
+Cloudtrail Logstash cloudformation Stack coming soon...
 kobibito@amazon.lu
