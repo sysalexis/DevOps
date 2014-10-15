@@ -35,7 +35,8 @@
         "InstanceType": {
             "AllowedValues": [
                 "m3.medium",
-                "m3.large"
+                "m3.large",
+                "m3.xlarge"
             ],
             "Default": "m3.medium",
             "Description": "EC2 instance type, e.g. m3.medium",
