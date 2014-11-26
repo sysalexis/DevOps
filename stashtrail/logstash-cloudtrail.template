@@ -14,6 +14,9 @@
             "eu-west-1": {
                 "64": "ami-0307d674"
             },
+			"eu-central-1": {
+				"64": "ami-b83c0aa5"
+			},
             "us-east-1": {
                 "64": "ami-864d84ee"
             },
@@ -22,6 +25,15 @@
             },
             "us-west-2": {
                 "64": "ami-e7b8c0d7"
+            },
+            "ap-northeast-1": {
+                "64": "ami-a1124fa0"
+            },
+            "ap-southeast-1": {
+                "64": "ami-12356d40"
+            },
+            "ap-southeast-2": {
+                "64": "ami-fddabdc7"
             }
         }
     },
@@ -86,7 +98,12 @@
             "Default": "LogBackupS3BucketName",
             "Description": "Name of the s3 bucket where cloudtrail logs backup will live",
             "Type": "String"
-        }
+        },
+        "CloudTrailMultiRegion": {
+            "Default": "eu-west-1",
+            "Description": "MultiRegion Support? enter region list where cloudtrail is enabled (Comma separated region list) i.e. eu-west-1,eu-central-1 MUST Contain at least a single region where cloudtrail is enabled",
+            "Type": "String"
+		}
     },
     "Resources": {
         "AccessKey": {
@@ -160,9 +177,18 @@
                                 "mode": "000644",
                                 "owner": "ubuntu"
                             },
+
                             "/home/ubuntu/.trailbucketprefix": {
                                 "content": {
                                     "Ref": "TrailBucketPrefix"
+                                },
+                                "group": "ubuntu",
+                                "mode": "000644",
+                                "owner": "ubuntu"
+                            },
+                            "/home/ubuntu/.regionlist": {
+                                "content": {
+                                    "Ref": "CloudTrailMultiRegion"
                                 },
                                 "group": "ubuntu",
                                 "mode": "000644",
