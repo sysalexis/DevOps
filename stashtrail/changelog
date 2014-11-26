@@ -2,3 +2,4 @@
 26/Nov - Version 1.1
  - Added support for multi-region
  - Fixed bug in kibana deployment via chef
+ - Added ubuntu AMI IDs for eu-central and the APAC regions
