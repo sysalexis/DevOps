@@ -55,7 +55,7 @@ aws s3 --region $REGION cp s3://$ARTIFACTS/chef-solo-all.tar.gz "/" 2>>/tmp/s3ou
      echo "    'backupbucket' => '"$bk"'," >> /var/chef-solo/roles/logstash.rb
      echo "    'accesskey' => '"$ak"'," >> /var/chef-solo/roles/logstash.rb
      echo "    'secretkey' => '"$sk"'," >> /var/chef-solo/roles/logstash.rb
-     echo "    'region' => '"us-east-1"'," >> /var/chef-solo/roles/logstash.rb
+     echo "    'region' => '"$REGION"'," >> /var/chef-solo/roles/logstash.rb
      echo "    'prefix' => '"$aggrprefix"'" >> /var/chef-solo/roles/logstash.rb
      echo "}" >> /var/chef-solo/roles/logstash.rb
      echo ")" >> /var/chef-solo/roles/logstash.rb
